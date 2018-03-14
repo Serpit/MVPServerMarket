@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.itaem.serpit.baselibrary.widgets.HeaderBar
+        app:titleColor="@color/white"
+        app:backgroundColor="@color/lightGreen"
+        app:titleText="选择参加团购的商品"
+        style="@style/MatchWrap"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mListRv"
+        app:layoutManager="LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/mCurrentPriceTv"
+            android:layout_marginLeft="100dp"
+            android:layout_centerVertical="true"
+            android:text="未选购商品"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+
+            android:id="@+id/mConfirmBt"
+            android:textColor="@color/lightGray"
+            android:text="下一步"
+            android:layout_alignParentRight="true"
+            android:background="@color/darkGray"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

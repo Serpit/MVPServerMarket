@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.itaem.serpit.baselibrary.widgets.HeaderBar
+                android:id="@+id/mHeaderBar"
+                app:backgroundColor="@color/lightGreen"
+                app:titleText="确认订单"
+                app:titleColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:checked="true"
+                    android:background="@null"
+                    android:id="@+id/mBookRBt"
+                    android:textSize="@dimen/text_middle_size"
+                    android:text="预定（自提）"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <View
+                    android:background="@color/lightGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <RadioButton
+
+                    android:textSize="@dimen/text_middle_size"
+                    android:background="@null"
+                    android:text="送货上门"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+            </RadioGroup>
+            <View
+                android:background="@color/lightGray"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <LinearLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/location_gray"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+                <LinearLayout
+
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/mUserNameTv"
+                            android:textColor="@color/black"
+                            android:text="GGG"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/mPhoneTv"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="16dp"
+                            android:text="123456789"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/mAddressTv"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:text="广东省湛江市湖光广东海洋大学"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/mSetMsgLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/more"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+                </RelativeLayout>
+                <View
+                    android:layout_marginTop="10dp"
+                    android:background="@color/lightGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:background="@color/lightGray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <LinearLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/more"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:text="送达时间："
+                    android:textSize="@dimen/text_middle_size" />
+                <TextView
+
+                    android:id="@+id/mArriveTime"
+                    android:textColor="@color/black"
+                    android:text="预计17:30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/more"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:background="@color/lightGray"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/mGoodListLL"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/mShopNameTv"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:text="商家名称"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="16dp"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="15sp"
+                    android:text="合计："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/mPriceTv"
+                    android:text="￥21"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:background="@color/lightGray"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:text="订单备注："
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:id="@+id/mRemarkTv"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:hint="要求备注"
+                    android:textSize="15sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:background="@color/lightGray"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+
+        </LinearLayout>
+    <RelativeLayout
+        android:background="@color/noColor"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <RelativeLayout
+            android:background="@color/gray"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:id="@+id/mCurrentPriceTv"
+                android:layout_marginLeft="100dp"
+                android:layout_centerVertical="true"
+                android:text="待支付￥21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/mConfirmBt"
+                android:textColor="@color/lightGray"
+                android:text="支付"
+                android:layout_alignParentRight="true"
+                android:background="@color/lightGreen"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+

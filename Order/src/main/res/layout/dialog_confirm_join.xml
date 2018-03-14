@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/background_add_good"
+
+    android:layout_width="350dp"
+    android:layout_height="wrap_content">
+    <TextView
+
+        android:id="@+id/mTitleText"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="是否配送"
+        android:textColor="@color/lightGreen"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+
+        <RadioGroup
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+
+
+                    android:background="@null"
+                    android:id="@+id/mBookRBt"
+                    android:textSize="@dimen/text_middle_size"
+                    android:text="自提"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+
+
+                <RadioButton
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/mDeliverRBt"
+                    android:textSize="@dimen/text_middle_size"
+                    android:background="@null"
+                    android:text="送货上门"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+
+        </RadioGroup>
+
+
+    <View
+        android:background="@color/lightGray"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/mCancelBt"
+            android:textColor="@color/gray"
+            android:text="取消"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="48dp" />
+        <Button
+            android:id="@+id/mConfirmBt"
+            android:textColor="@color/lightGreen"
+            android:text="马上支付"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+</LinearLayout>

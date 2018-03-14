@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/white_green_border_button_bg"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+    style="@style/MatchWrap">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        style="@style/MatchWrap">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            app:riv_corner_radius="15dp"
+            android:src="@mipmap/cat"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:id="@+id/mArriveTimeTv"
+                android:text="2018-02-27 16:57:06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="10sp"
+                android:layout_below="@+id/mArriveTimeTv"
+                android:text="2018-02-09 16:59:38"
+                android:id="@+id/mOrderTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/mStateTv"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:text="已接单"
+                style="@style/WrapWrap" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:paddingTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:textColor="@color/black"
+            android:text="张先生"
+            android:id="@+id/mUserNameTv"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:text="13420118224"
+            android:id="@+id/mPhoneTv"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:text="费用："
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/mPriceTv"
+            android:text="￥120"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_middle_size"
+            android:text="商品："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/mGoodsTv"
+            android:text="猪肉，牛肉"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:text="地址："
+            android:textSize="@dimen/text_middle_size"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/mAddressTv"
+            android:text="潮南区胪岗镇1号"
+            android:textSize="@dimen/text_middle_size"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <Button
+        android:id="@+id/mOrderReceivingBtn"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="end"
+        android:background="@drawable/white_green_border_button_bg"
+        android:textColor="@color/lightGreen"
+        android:textSize="@dimen/text_middle_size"
+        android:text="取消订单"
+        android:layout_width="90dp"
+        android:layout_height="29dp" />
+
+</LinearLayout>

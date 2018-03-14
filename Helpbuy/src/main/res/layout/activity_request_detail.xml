@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<com.itaem.serpit.baselibrary.widgets.HeaderBar
+    app:titleText="请求列表"
+    app:titleColor="@color/white"
+    app:backgroundColor="@color/lightGreen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+
+    <android.support.design.widget.TabLayout
+
+        android:id="@+id/mTabLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.design.widget.TabLayout>
+
+    <FrameLayout
+        android:id="@+id/mContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>
