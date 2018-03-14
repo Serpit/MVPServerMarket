@@ -41,3 +41,5 @@
 
 ![](https://raw.githubusercontent.com/Serpit/BlogImgs/master/market10.jpg)
 ![](https://raw.githubusercontent.com/Serpit/BlogImgs/master/market11.jpg)
+
+说明：此项目为比赛使用，所有数据都是模拟数据，如有雷同，纯属巧合
