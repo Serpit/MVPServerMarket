@@ -1,6 +1,7 @@
 package com.itaem.serpit.mvpservicemarket.ui.activity;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 
 import com.itaem.serpit.mvpservicemarket.R;
 import com.itaem.serpit.mvpservicemarket.utils.Utils;
+
+import java.lang.ref.WeakReference;
 
 
 //欢迎页面 五秒后跳到主页面
@@ -57,6 +60,20 @@ public class WelcomeActivity extends AppCompatActivity {
             if (checkSelfPermission(permissions[0]) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(permissions, 0);
             }
+        }
+    }
+
+
+     class SkipHandler extends Handler{
+        //WeakReference<WelcomeActivity> mWeakActivity = new WeakReference<WelcomeActivity>();
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+           // WelcomeActivity activity = mWeakActivity.get();
+            //跳转到MainActivity
+            startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+            finish();
         }
     }
 }
