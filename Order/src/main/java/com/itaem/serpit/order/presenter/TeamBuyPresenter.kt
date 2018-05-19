@@ -27,6 +27,9 @@ class TeamBuyPresenter @Inject constructor() :BasePresenter<TeamBuyView>(){
              override fun onNext(t: List<TeamBuyInfo>) {
                  val teamBuyItemList:ArrayList<TeamBuyItem> = arrayListOf()
                  for (teamBuyInfo in t){
+                     if(teamBuyInfo.surplus<=0){
+                         continue;
+                     }
                      val nameBuilder = StringBuilder()
                      for (good in teamBuyInfo.goodVo){
                          if(good.num>0){
@@ -36,7 +39,13 @@ class TeamBuyPresenter @Inject constructor() :BasePresenter<TeamBuyView>(){
 
                      }
 
-                     teamBuyItemList.add(TeamBuyItem(teamBuyInfo.id,nameBuilder.toString(),teamBuyInfo.shopVo.pic,teamBuyInfo.endTime,teamBuyInfo.originalPrice,teamBuyInfo.groupPrice,teamBuyInfo.originalPrice,teamBuyInfo.limitNum))
+                     teamBuyItemList.add(TeamBuyItem(teamBuyInfo.id,
+                             nameBuilder.toString(),
+                             teamBuyInfo.shopVo.pic,
+                             teamBuyInfo.endTime,teamBuyInfo.originalPrice,
+                             teamBuyInfo.groupPrice,
+                             teamBuyInfo.surplus,
+                             teamBuyInfo.limitNum))
                  }
                  mView.onGetTeamBuyListSuccess(teamBuyItemList)
              }

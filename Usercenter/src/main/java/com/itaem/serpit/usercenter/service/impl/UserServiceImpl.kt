@@ -38,6 +38,6 @@ class UserServiceImpl @Inject constructor():UserService {
         return repository.postShopImg(shopId,part)
     }
     override fun postUserImg(userId: Int, part: MultipartBody.Part): Observable<UploadImgResp> {
-        return repository.postShopImg(userId,part)
+        return repository.postUserImg(userId,part)
     }
 }
