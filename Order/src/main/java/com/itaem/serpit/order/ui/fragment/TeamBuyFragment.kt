@@ -1,6 +1,7 @@
 package com.itaem.serpit.order.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,7 @@ import org.jetbrains.anko.support.v4.toast
  *
  */
 class TeamBuyFragment :BaseMvpFragment<TeamBuyPresenter>(),TeamBuyView, View.OnClickListener {
+    val TAG = "TeamBuyFragment"
     lateinit var adapter:TeamBuyListAdapter
     override fun onClick(v: View?) {
         when(v?.id){
@@ -44,13 +46,36 @@ class TeamBuyFragment :BaseMvpFragment<TeamBuyPresenter>(),TeamBuyView, View.OnC
     }
 
 
-    override fun onResume() {
-        super.onResume()
+    /*override fun onStart() {
+        super.onStart()
         loadData()
         adapter = TeamBuyListAdapter(mPresenter,activity)
         initView()
+    }*/
 
+
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        if (hidden){
+            Log.d(TAG,"隐藏")
+        }else{
+            Log.d(TAG,"显示")
+            loadData()
+            adapter = TeamBuyListAdapter(mPresenter,activity)
+            // Log.d(TAG,"onResume")
+            initView()
+        }
     }
+
+
+   /* override fun onResume() {
+        super.onResume()
+        loadData()
+        adapter = TeamBuyListAdapter(mPresenter,activity)
+       // Log.d(TAG,"onResume")
+        initView()
+
+    }*/
 
     private fun initView() {
         if (AppPrefsUtils.getString(BaseConstant.KEY_SP_LOCATION)!=""){
@@ -67,6 +92,9 @@ class TeamBuyFragment :BaseMvpFragment<TeamBuyPresenter>(),TeamBuyView, View.OnC
 
 
     override fun onJoinTeamBuySuccess() {
+        loadData()
+        adapter = TeamBuyListAdapter(mPresenter,activity)
+        initView()
         toast("参加团购成功")
     }
 
